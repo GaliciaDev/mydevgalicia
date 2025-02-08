@@ -1,0 +1,33 @@
+/* Aqui una Fuente */
+
+:root {
+  --font-app: Arial, Helvetica, sans-serif;
+
+  /* Paleta de colores */
+  --background-color: #1a1a1a;
+  --text-color: #fff;
+
+  --accent-primary-color: #ffd700;
+  --accent-secondary-color: #ff8c00;
+  --accent-tertiary-color: #459fc9;
+  --accent-dark-color: #1a1a1a;
+
+  --border-main-color: #333;
+
+  /* SO-KALI */
+  --taskbar-bg: #454545;
+
+  /* Depuracion */
+  --border-test: red;
+
+  /* Tamaños */
+  --font-size-min: 0.5rem; /* 16px */
+  --font-size-max: 2rem; /* 32px */
+  --font-size-base: 1vw + 1rem; /* Combina unidades relativas y absolutas */
+
+  /* Espaciados */
+  --spacing-min: 0.5rem; /* 8px */
+  --spacing-base: 1rem; /* 16px */
+  --spacing-medium: 2rem; /* 32px */
+  --spacing-large: 4rem; /* 64px */
+}

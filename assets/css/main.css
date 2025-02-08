@@ -1,0 +1,10 @@
+@import url(./layout/rules.css);
+@import url(./layout/views.css);
+
+.kali__app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+}

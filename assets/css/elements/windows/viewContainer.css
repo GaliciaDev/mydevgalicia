@@ -1,0 +1,73 @@
+@import url(./actionsApp.css);
+
+.window {
+  position: fixed;
+  min-width: 12vw;
+  min-height: 15vh;
+  max-width: 100%;
+  max-height: calc(98vh - 0.4rem);
+  border: 1px solid var(--border-main-color);
+  background-color: var(--background-color);
+  box-shadow: 0 0 10px 0 var(--border-main-color);
+  resize: both;
+  overflow: auto;
+  transition: box-shadow 0.3s; /* Esto es opcional */
+  background-color: var(--border-main-color);
+  top: 40%;
+  left: 45%;
+}
+
+.title__app {
+  background-color: var(--border-main-color);
+  padding: 0.3rem;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title__app span,
+i {
+  color: var(--text-color);
+  font-size: calc(var(--font-size-min) - 3px);
+}
+
+.window__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.window__buttons span {
+  display: flex;
+  align-items: center;
+}
+
+.app__container {
+  padding: 0.5rem 0 0 0.3rem; /* Probablemente esto cambie */
+  color: #0bc769;
+  font-size: var(--font-size-min);
+}
+
+.close--app i:hover {
+  color: #ff0000;
+}
+
+.maximize--app i {
+  font-size: calc(var(--font-size-min) - 5px);
+}
+
+.maximize--app i:hover {
+  color: #58c52d;
+}
+
+.minimize--app i:hover {
+  color: #00ccff;
+}
+
+/* Hover o animaciones */
+.window:hover {
+  box-shadow: 0 0 10px 0 var(--accent-dark-color); /* Este es opcional */
+}

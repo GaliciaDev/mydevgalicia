@@ -1,9 +1,10 @@
-/* Funciones para las ventanas */
+import { setupCloseControls } from './controls/closeWindows.js';
+import { setupMaximizeControls } from './controls/maximizeWindow.js';
 
 export function controlsWindow() {
-    console.log('Controles de ventana');/* Esto es netamente de depuracion */
+    console.log('Window controls loaded');
 
-    /* Algoritmo para cerrar la ventana */
-    
-
+    // Inicializar los controles de cerrar y maximizar
+    setupCloseControls();
+    setupMaximizeControls();
 }

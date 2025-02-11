@@ -1,23 +1,11 @@
-import { handleWindowPositioning } from '../positioning.js';
+import { handleWindowPositioning } from '../events/positioning.js';
+import { getClientCoordinates } from '../events/coordinates.js';
+import { getTaskbarHeight } from '../events/taskbar.js';
 
 export const createDragManager = () => {
     let currentWindow = null;
     let offsetX, offsetY;
-    let taskbarHeight = 0;
-
-    // Calcular la altura de la barra de tareas una sola vez
-    const taskbar = document.querySelector('.taskbar__container');
-    if (taskbar) {
-        taskbarHeight = taskbar.getBoundingClientRect().height;
-    }
-
-    const getClientCoordinates = (event) => {
-        const touchEvent = event.touches ? event.touches[0] : event;
-        return {
-            clientX: touchEvent.clientX,
-            clientY: touchEvent.clientY,
-        };
-    };
+    const taskbarHeight = getTaskbarHeight();
 
     const startDrag = (event, window) => {
         currentWindow = window;
@@ -25,6 +13,12 @@ export const createDragManager = () => {
         const rect = window.getBoundingClientRect();
         offsetX = clientX - rect.left;
         offsetY = clientY - rect.top;
+
+        // Ajustar el tamaño de la ventana al comenzar a arrastrar si está en los bordes
+        if (isWindowOnEdge(window)) {
+            adjustWindowSize(window);
+            console.log('Adjusting window size because it is on the edge');
+        }
     };
 
     const drag = (event) => {
@@ -34,29 +28,46 @@ export const createDragManager = () => {
         const { innerWidth, innerHeight } = window;
         const { width, height } = currentWindow.getBoundingClientRect();
 
-        // Limitar el movimiento dentro de los límites de la pantalla
         const maxX = innerWidth - width;
         const maxY = innerHeight - height;
-
-        // Evitar que la ventana sobrepase la barra de tareas
         const minY = taskbarHeight;
 
         const newX = Math.max(0, Math.min(clientX - offsetX, maxX));
         const newY = Math.max(minY, Math.min(clientY - offsetY, maxY));
 
-        // Usar requestAnimationFrame para mejor rendimiento
         requestAnimationFrame(() => {
-            currentWindow.style.left = `${newX}px`;
-            currentWindow.style.top = `${newY}px`;
+            if (currentWindow) {
+                currentWindow.style.left = `${newX}px`;
+                currentWindow.style.top = `${newY}px`;
+            }
         });
     };
 
     const endDrag = () => {
         if (currentWindow) {
-            // Aplicar el posicionamiento solo al finalizar el arrastre
             handleWindowPositioning(currentWindow);
+            console.log('Window positioning handled');
         }
         currentWindow = null;
+    };
+
+    const adjustWindowSize = (window) => {
+        window.style.width = '12vw'; // Ajustar a un tamaño más pequeño
+        window.style.height = '15vh'; // Ajustar a un tamaño más pequeño
+        console.log('Window size adjusted to smaller dimensions');
+    };
+
+    const isWindowOnEdge = (window) => {
+        const rect = window.getBoundingClientRect();
+        const { innerWidth } = window;
+        if (rect.left <= 0) {
+            console.log('Window is on the left edge');
+            return true;
+        } else if (rect.right >= innerWidth) {
+            console.log('Window is on the right edge');
+            return true;
+        }
+        return false;
     };
 
     return {

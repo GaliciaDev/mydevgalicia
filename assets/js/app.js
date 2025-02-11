@@ -4,4 +4,5 @@ import { controlsWindow } from './windows/controlsWindow.js';
 console.log('App started');
 
 motionSystem();
-controlsWindow(); 
+controlsWindow();
+

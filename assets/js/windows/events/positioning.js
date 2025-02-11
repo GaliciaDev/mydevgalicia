@@ -15,6 +15,7 @@ export const handleWindowPositioning = (windowElement) => {
         windowElement.style.height = `${innerHeight - taskbarHeight}px`;
         windowElement.style.left = `0px`;
         windowElement.style.top = `${taskbarHeight}px`;
+        console.log('Window positioned on the left edge');
     }
     // Si la ventana está cerca del borde derecho
     else if (right >= innerWidth) {
@@ -22,5 +23,6 @@ export const handleWindowPositioning = (windowElement) => {
         windowElement.style.height = `${innerHeight - taskbarHeight}px`;
         windowElement.style.left = `${innerWidth / 2}px`;
         windowElement.style.top = `${taskbarHeight}px`;
+        console.log('Window positioned on the right edge');
     }
 };

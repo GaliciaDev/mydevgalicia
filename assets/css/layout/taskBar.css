@@ -1,0 +1,61 @@
+@import url(../icons/setIcon.css);
+@import url(../elements/taskBar/barAnimated.css);
+
+/* Navbar */
+.taskbar__container {
+  display: flex;
+  align-items: center;
+  background-color: var(--taskbar-bg);
+  padding: calc(1rem - 2px);
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  width: 100%;
+  height: 2vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.navbar__link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.5rem;
+}
+
+.apps__container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: fit-content;
+  max-width: 70vw;
+}
+
+.bar-decorative {
+  width: 3px;
+  height: 30px;
+  background-color: white;
+}
+
+.windows__views {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  width: 7vw;
+}
+
+.system__settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  /* border: 1px solid; */
+  width: fit-content;
+}

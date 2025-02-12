@@ -1,0 +1,11 @@
+.browser--icon {
+  width: 100%;
+  height: 100%;
+}
+
+.browser--icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Asegurarse de que la imagen cubra todo el contenedor */
+  filter: drop-shadow(0 0 1px #ffffff);
+}

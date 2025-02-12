@@ -1,0 +1,34 @@
+.txtEdit--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  filter: drop-shadow(0 0 2px #ffffff);
+}
+
+.txtEdit--icon span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 65%;
+  height: 80%;
+  position: relative; /* Cambiar a relative para que el figure se posicione correctamente */
+}
+
+.txtEdit--icon span figure {
+  display: flex;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0; /* Mover al borde inferior */
+  right: 0; /* Mover al borde derecho */
+  transform: translate(
+    40%,
+    54%
+  ); /* Ajustar la posición para centrar el círculo */
+  background-color: rgb(255, 51, 0);
+}

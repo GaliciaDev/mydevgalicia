@@ -1,0 +1,12 @@
+.stat--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat--icon span {
+  font-size: calc(var(--font-size-max) - 1rem);
+  /* Rotar */
+  transform: rotate(180deg);
+  filter: drop-shadow(0 0 2px #ffffff);
+}

@@ -1,6 +1,16 @@
+/* Iconos individuales */
+@import url(./browserEmblem.css);
+@import url(./clockTaskbar.css);
+@import url(./desktopEmblem.css);
+@import url(./folderEmblem.css);
+@import url(./kaliEmblem.css);
+@import url(./statSymbol.css);
+@import url(./txtEditorEmblem.css);
+@import url(./windowsViews.css);
+
 .navbar__link {
-  height: 34px;
-  width: 34px;
+  height: 32px;
+  width: 32px;
 }
 
 /* Efecto hover de crecimiento */

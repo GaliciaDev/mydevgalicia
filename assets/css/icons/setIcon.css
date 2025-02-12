@@ -17,5 +17,5 @@
 /* Efecto hover de crecimiento */
 .navbar__link:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 3px var(--accent-tertiary-color));
+  /* filter: drop-shadow(0 0 3px var(--accent-tertiary-color)); */
 }

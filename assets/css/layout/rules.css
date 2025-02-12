@@ -15,10 +15,12 @@
   --border-main-color: #333;
 
   /* SO-KALI */
-  --taskbar-bg: #454545;
+  --taskbar-bg: #454545c4;
   --barline-main: #1a59e4;
   --barline-secondary: #5dcf85;
 
+  /* #454545 */
+  /* 4545453a */
   /* Depuracion */
   --border-test: red;
 

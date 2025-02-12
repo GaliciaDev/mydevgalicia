@@ -1,20 +1,20 @@
 /* Definir variables CSS para las duraciones de animación */
 :root {
-  --animation-duration-1: 474ms;
-  --animation-duration-2: 433ms;
-  --animation-duration-3: 407ms;
-  --animation-duration-4: 458ms;
-  --animation-duration-5: 400ms;
-  --animation-duration-6: 427ms;
-  --animation-duration-7: 441ms;
-  --animation-duration-8: 419ms;
-  --animation-duration-9: 487ms;
-  --animation-duration-10: 442ms;
-  --animation-duration-11: 405ms;
-  --animation-duration-12: 468ms;
-  --animation-duration-13: 418ms;
-  --animation-duration-14: 451ms;
-  --animation-duration-15: 481ms;
+  --animation-duration-1: 948ms;
+  --animation-duration-2: 866ms;
+  --animation-duration-3: 814ms;
+  --animation-duration-4: 916ms;
+  --animation-duration-5: 800ms;
+  --animation-duration-6: 854ms;
+  --animation-duration-7: 882ms;
+  --animation-duration-8: 838ms;
+  --animation-duration-9: 974ms;
+  --animation-duration-10: 884ms;
+  --animation-duration-11: 810ms;
+  --animation-duration-12: 936ms;
+  --animation-duration-13: 836ms;
+  --animation-duration-14: 902ms;
+  --animation-duration-15: 962ms;
 }
 
 .bars__landscape {

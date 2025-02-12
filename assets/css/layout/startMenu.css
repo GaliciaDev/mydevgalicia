@@ -1,0 +1,8 @@
+.start__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 70%;
+  background-color: var(--taskbar-bg);
+}

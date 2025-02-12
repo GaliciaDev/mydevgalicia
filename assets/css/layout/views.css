@@ -1,5 +1,6 @@
 /* Secciiones */
 @import url(./taskBar.css);
+@import url(./startMenu.css);
 * {
   margin: 0;
   padding: 0;

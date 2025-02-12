@@ -7,6 +7,7 @@
 @import url(./statSymbol.css);
 @import url(./txtEditorEmblem.css);
 @import url(./windowsViews.css);
+@import url(./shellEmblem.css);
 
 .navbar__link {
   height: 32px;

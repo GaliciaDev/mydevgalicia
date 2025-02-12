@@ -1,4 +1,12 @@
 .time--taskbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.time--taskbar {
+  display: flex;
   font-size: medium; /* Esta se va a cambiar */
   /* No hacer salto de linea */
   white-space: nowrap;

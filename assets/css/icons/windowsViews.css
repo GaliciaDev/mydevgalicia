@@ -7,6 +7,11 @@
   text-shadow: 0 0 2px #ffffff;
 }
 
+.desktopManager--icons:hover {
+  /* Borde de deabjo */
+  border-bottom: var(--accent-tertiary-color) 1px solid;
+}
+
 .system--icons {
   display: flex;
   justify-content: center;

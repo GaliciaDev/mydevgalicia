@@ -20,7 +20,7 @@
     <header class="taskbar__container">
         <nav class="navbar">
             <arti class="apps__container">
-                <a href="#" class="navbar__link kali--emblem"><img src="./assets/img/loader/loader.png" alt=""></a>
+                <a href="#" class="navbar__link kali--emblem"><img src="./assets/img/loader/loader.png" alt=""><input type="checkbox" class="startButton" name="startButton" id="startButton"></a>
                 <figure class="bar-decorative"></figure>
                 <a href="#" class="navbar__link desktop--icon"><img src="./assets/img/icons/desktop.svg" alt="Desktop Icon"></a>
                 <a href="#" class="navbar__link folder--icon"><img src="./assets/img/icons/filemanager.svg" alt=""></a>
@@ -87,7 +87,7 @@
         <section class="desktop">
 
             <div class="start__menu">
-                
+
             </div>
 
 
@@ -114,6 +114,12 @@
     </footer>
     
     <script src="./assets/js/app.js" type="module"></script>
+    <script>
+        document.querySelector('.startButton').addEventListener('change', function () {
+  document.querySelector('.start__menu').classList.toggle('active', this.checked);
+});
+
+    </script>
 
 </body>
 </html>

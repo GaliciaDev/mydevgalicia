@@ -1,8 +1,18 @@
 .start__menu {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 30%;
   height: 70%;
   background-color: var(--taskbar-bg);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.start__menu.active {
+  /* Esta clase se encarga de que se muestre con el js */
+  display: flex;
+  opacity: 1;
 }
